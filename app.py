@@ -3,7 +3,7 @@ import pymysql
 import os
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
-
+#ok
 AZURE_KEY_VAULT_URL = os.environ["AZURE_KEY_VAULT_URL"]
 
 credential = DefaultAzureCredential()
@@ -20,7 +20,7 @@ conn = pymysql.connect(
         user = _dbusername.value, 
         password = _dbpassword.value, 
         db = _dbname.value, 
-        ssl={'ca': './DigiCertGlobalRootCA.crt.pem'},
+        ssl={'ca': '.DigiCertGlobalRootCA.crt.pem'},
         cursorclass = pymysql.cursors.DictCursor)  
 
 app = Flask(__name__)
